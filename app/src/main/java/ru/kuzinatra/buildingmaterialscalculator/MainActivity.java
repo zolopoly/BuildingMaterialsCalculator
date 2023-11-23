@@ -44,9 +44,19 @@ public class MainActivity extends AppCompatActivity {
                 change = store.sell();
                 output.setText(String.valueOf(Math.floor(change)));
 
+                StringBuilder shopListString = new StringBuilder();
                 for (Item item : Store.getItems()) {
-                    shopList.append("- " + item.getName() + "\t\t\t" + item.getPrice() + "\t\t\t" + item.getDiscount() + "\t\t\t" + item.getDiscountPrice() + "\n");
+                    shopListString.append("- ")
+                            .append(item.getName())
+                            .append("\t\t\t")
+                            .append(item.getPrice())
+                            .append("\t\t\t")
+                            .append(item.getDiscount())
+                            .append("\t\t\t")
+                            .append(item.getDiscountPrice())
+                            .append("\n");
                 }
+                shopList.setText(shopListString.toString());
 
 
                 for (Item item : user.getCart()) {
