@@ -20,10 +20,6 @@ public class User {
         return cart;
     }
 
-    public void setWallet(double wallet) {
-        this.wallet = wallet;
-    }
-
     public boolean buy(Item item) {
         if (item.getDiscountPrice() <= wallet) {
             wallet -= item.getDiscountPrice();

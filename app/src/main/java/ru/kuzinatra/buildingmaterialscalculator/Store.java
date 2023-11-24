@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
+    private int soldItemCount;
     private User user;
     private static List<Item> items = new ArrayList<>();
 
@@ -23,15 +24,12 @@ public class Store {
         return items;
     }
 
-    public double sell() {
-        boolean result = true;
+    public boolean sell() {
         for (Item item : items) {
-            if (result) {
-                result = user.buy(item);
-            } else {
-                return -1;
+            if (user.buy(item)) {
+                soldItemCount++;
             }
         }
-        return user.getWallet();
+        return soldItemCount == items.size();
     }
 }

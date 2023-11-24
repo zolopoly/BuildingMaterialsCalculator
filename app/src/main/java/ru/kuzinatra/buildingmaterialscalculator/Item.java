@@ -1,10 +1,9 @@
 package ru.kuzinatra.buildingmaterialscalculator;
 
-public class Item{
+public class Item {
     private final String name;
     private double price;
     private double discount;
-
 
     public Item(String name, long price, long discount) {
         this.name = name;
