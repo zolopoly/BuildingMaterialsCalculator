@@ -13,9 +13,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="Калькулятор строительных материалов"
+        android:text="КАЛЬКУЛЯТОР СТРОИТЕЛЬНЫХ МАТЕРИАЛОВ"
         android:textAlignment="center"
-        android:textColor="#880E4F"
+        android:textColor="#B71C1C"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,8 @@
             android:id="@+id/shop_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#20880E4F" />
+            android:background="#20880E4F"
+            android:textSize="16sp" />
     </ScrollView>
 
     <ScrollView
@@ -54,7 +55,8 @@
         <TextView
             android:id="@+id/cart_list"
             android:layout_width="344dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
     </ScrollView>
 
     <Button
@@ -62,12 +64,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="#BF360C"
+        android:backgroundTint="#BF360C"
+        android:shadowColor="#BF360C"
         android:text="Попробуем купить"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:rippleColor="#BF360C"
+        app:strokeColor="#BF360C" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -85,7 +92,9 @@
             android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:text="У вас есть:"
-            android:textSize="20sp" />
+            android:textColor="#BF360C"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/input"
@@ -95,7 +104,11 @@
             android:hint="количество монет"
             android:inputType="number"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textColor="#BF360C"
+            android:textColorHighlight="#BF360C"
+            android:textColorHint="#BF360C"
+            android:textColorLink="#BF360C"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,15 +126,18 @@
             android:id="@+id/output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#880E4F"
-            android:textSize="20sp" />
+            android:textColor="#BF360C"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20sp" />
+            android:textColor="#BF360C"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
@@ -131,8 +147,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:textColor="#880E4F"
-        android:textSize="16sp"
+        android:textColor="#BF360C"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_buy" />
@@ -144,8 +161,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="Список покупок (цена/скидка/цена со скидкой)"
-        android:textColor="#880E4F"
+        android:text="Смета (цена/скидка/цена со скидкой):"
+        android:textColor="#BF360C"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />

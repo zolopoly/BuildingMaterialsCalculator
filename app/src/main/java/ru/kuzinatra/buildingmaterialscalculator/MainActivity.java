@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private void setShopList() {
         StringBuilder shopListString = new StringBuilder();
         for (Item item : Store.getItems()) {
-            shopListString.append("- ")
+            shopListString.append("\t- ")
                     .append(item.getName())
                     .append("\t\t\t")
                     .append(item.getPrice())
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private void setCartList() {
         StringBuilder cartListString = new StringBuilder();
         for (Item item : user.getCart()) {
-            cartListString.append("- ")
+            cartListString.append("\t- ")
                     .append(item.getName())
                     .append("\t\t\t")
                     .append(item.getPrice())
