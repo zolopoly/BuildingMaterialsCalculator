@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 setCartList();
 
                 output.setText("Осталось монет: ");
-                change.setText(String.valueOf(Math.floor(user.getWallet())));
+                change.setText(String.valueOf((int) Math.floor(user.getWallet())));
             }
         });
     }
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
             shopListString.append("\t- ")
                     .append(item.getName())
                     .append("\t\t\t")
-                    .append(item.getPrice())
+                    .append((int) item.getPrice())
                     .append("\t\t\t")
-                    .append(item.getDiscount())
+                    .append((int) item.getDiscount())
                     .append("%\t\t\t")
                     .append(item.getDiscountPrice())
                     .append("\n");
@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
             cartListString.append("\t- ")
                     .append(item.getName())
                     .append("\t\t\t")
-                    .append(item.getPrice())
+                    .append((int) item.getPrice())
                     .append("\t\t\t")
-                    .append(item.getDiscount())
+                    .append((int) item.getDiscount())
                     .append("%\t\t\t")
                     .append(item.getDiscountPrice())
                     .append("\n");
